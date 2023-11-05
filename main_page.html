@@ -79,6 +79,11 @@
             <span class="author-block"><sup>4</sup>Sydney AI Centre, The University of Sydney</span>
           </div>
 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-size: 15px;">(<sup>*</sup>Equal Contribution)</span>
+        </div>
+
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -186,7 +191,7 @@
           alt="img description"
           width="800"
           height="600" />
-        <p>Fig.1 Examples (with the latest GPT-4) of the direct and our instructions for jailbreak attacks.</p>
+        <p>Fig.1 Examples (with the latest GPT-4) of the direct and our instructions for jailbreak.</p>
       </div>
       
 
@@ -196,6 +201,113 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="container has-text-centered">
+      <h2 class="title is-3">Deep Inception</h2>
+
+      <!-- Add image -->
+      <div class="figure">
+        <img
+          src="./static/paper_imgs/deeper.jpg"
+          alt="img description"
+          width="530"
+          height="225" />
+          <img
+          src="./static/paper_imgs/Milgram-experiment.png"
+          alt="img description"
+          width="304"
+          height="225" />
+        <p>Fig.2 XXX.</p>
+      </div>
+      <br><br>
+
+      <div class="figure">
+        <img
+          src="./static/paper_imgs/illustration-3-1.png"
+          alt="img description"
+          width="800"
+          height="600" />
+        <p>Fig.4 XXX.</p>
+      </div>
+      <br><br>
+
+      <div class="figure">
+        <img
+          src="./static/paper_imgs/Template.png"
+          alt="img description"
+          width="800"
+          height="600" />
+        <!-- <p>Fig.5 Template.</p> -->
+      </div>
+
+    </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<br><br>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Jailbreak Examples</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-claude2">
+          <img src="./static/paper_imgs/exp1.png" 
+          class="example-image"
+          alt="Claude-2 jailbreak example." id="Claude-2"/>
+        </div>
+        <div class="item item-gpt4">
+          <img src="./static/paper_imgs/exp2.png"
+          class="example-image"
+          alt="GPT-4 jailbreak example."  id="GPT-4"/>
+        </div>
+        <div class="item item-gpt35">
+          <img src="./static/paper_imgs/exp3.png"
+                 class="example-image"
+                 alt="GPT-3.5 jailbreak example"  id="GPT-3.5"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Experimental Results</h2>
+
+        <div class="content has-text-justified is-centered">
+          <p>
+            We evaluate the success rate of <span class="pair">PAIR</span> against the prior state-of-the-art for directly generating jailbreaks on a target model. Since <span class="pair">PAIR</span> does not require access to model weights, we can attack any language model with just API access. <span class="pair">PAIR</span> often succeeds with a few dozen queries, rather than hundreds of thousands.
+          </p>
+        </div>        
+          <div class="content has-text-centered">
+            <img src="./static/paper_imgs/results1.png" style="width:800px;"
+            class="result-image"
+            alt="Interpolation end reference image."/>
+          </div>
+          <br>
+          <div class="content has-text-justified is-centered">
+            <p>
+            From <span class="pair">PAIR</span>'s generated jailbreaks, we compare the transferability to different target models. <span class="pair">PAIR</span> achieves state-of-the-art transferability, with notably higher success with more complex models like GPT-4 (we omit transferring to the original target model).
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/paper_imgs/results2.png" style="width:800px;"
+            class="result-image"
+            alt="Interpolation end reference image."/>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
