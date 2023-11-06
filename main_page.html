@@ -106,7 +106,9 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              
+              <!-- arXiv Abs Link.
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/XX"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -114,7 +116,8 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
+              
               <!-- Video Link.
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -190,78 +193,164 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Add image -->
-      <div class="figure">
-        <img
-          src="./static/paper_imgs/direct-indirect-examples.png"
-          alt="img description"
-          width="800"
-          height="600" />
-        <p>Fig.1 Examples (with the latest GPT-4) of the direct and our instructions for jailbreak.</p>
+    <!-- Intro. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <!-- Add image -->
+          <div class="figure" style="align: left; text-align:center;">
+              <img
+                src="./static/paper_imgs/direct-indirect-examples.png"
+                alt="img description"
+                width="800"
+                height="600" />
+              <p>Fig.1 Examples (with the latest GPT-4) of the direct and our instructions for jailbreak.</p>
+          </div>
+          <br>
+          <!-- / Add image -->
+          <p>
+            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
+            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
+            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
+            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
+            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
+            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
+            countermeasures to prevent jailbreaks in real-world applications. 
+          </p>
+        </div>
       </div>
-      
-
-
     </div>
+    <!--/ Intro. -->
 
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="container has-text-centered">
-      <h2 class="title is-3">Deep Inception</h2>
 
-      <!-- Add image -->
-      <div class="figure">
-        <img
-          src="./static/paper_imgs/deeper.jpg"
-          alt="img description"
-          width="530"
-          height="225" />
-          <img
-          src="./static/paper_imgs/Milgram-experiment.png"
-          alt="img description"
-          width="304"
-          height="225" />
-        <p>Fig.2 XXX.</p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <!-- Intro -->
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <!-- Add image -->
+          <div class="figure" style="align: left; text-align:center;">
+              <img
+                src="./static/paper_imgs/direct-indirect-examples.png"
+                alt="img description"
+                width="800"
+                height="600" />
+              <p>Fig.1 Examples (with the latest GPT-4) of the direct and our instructions for jailbreak.</p>
+          </div>
+          <br>
+          <!-- / Add image -->
+          <p>
+            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
+            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
+            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
+            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
+            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
+            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
+            countermeasures to prevent jailbreaks in real-world applications. 
+          </p>
+        </div>
+        <!-- / Intro -->
+
+        <!-- Deep Inceptio: Motivation -->
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+          <div class="figure" style="align: left; text-align:center;">
+            <img
+              src="./static/paper_imgs/deeper.jpg"
+              alt="img description"
+              width="430"
+              height="225" />
+              <img
+              src="./static/paper_imgs/Milgram-experiment.png"
+              alt="img description"
+              width="230"
+              height="225" />
+            <p>Fig.2 An intuitive motivation(Left) and an illustration of the Milgram shock experimen (Right).</p>
+          </div>
+          <br>
+          <p>
+            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
+            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
+            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
+            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
+            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
+            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
+            countermeasures to prevent jailbreaks in real-world applications. 
+          </p>
+        </div>
+        <!-- / Deep Inception: Motivation -->
+
+        <br>
+
+        <!-- Deep Inceptio: Illustration -->
+        <h2 class="title is-3">Illustration</h2>
+        <div class="content has-text-justified">
+          <div class="figure" style="align: left; text-align:center;">
+              <img
+              src="./static/paper_imgs/direct-instruction-example-layer.png"
+              alt="img description"
+              width="800"
+              height="600" />
+              <p>Fig.2 An intuitive motivation(Left) and an illustration of the Milgram shock experimen (Right).</p>
+          </div>
+        <br>
+          <p>
+            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
+            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
+            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
+            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
+            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
+            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
+            countermeasures to prevent jailbreaks in real-world applications. 
+          </p>
+        </div>
+        <!-- / Deep Inception: Illustration -->
+
+
+        <!-- Deep Inceptio: Template -->
+        <h2 class="title is-3">Template</h2>
+        <div class="content has-text-justified">
+          <div class="figure" style="align: left; text-align:center;">
+              <img
+              src="./static/paper_imgs/Template.png"
+              alt="img description"
+              width="800"
+              height="600" />
+              <p>Fig.2 An intuitive motivation(Left) and an illustration of the Milgram shock experimen (Right).</p>
+          </div>
+        <br>
+          <p>
+            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
+            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
+            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
+            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
+            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
+            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
+            countermeasures to prevent jailbreaks in real-world applications. 
+          </p>
+        </div>
+        <!-- / Deep Inception: Illustration -->
+
+
       </div>
-      <br><br>
-
-      <div class="figure">
-        <img
-          src="./static/paper_imgs/direct-instruction-example-layer.png"
-          alt="img description"
-          width="800"
-          height="600" />
-        <p>Fig.4 XXX.</p>
-      </div>
-      <br><br>
-
-      <div class="figure">
-        <img
-          src="./static/paper_imgs/Template.png"
-          alt="img description"
-          width="800"
-          height="600" />
-        <!-- <p>Fig.5 Template.</p> -->
-      </div>
-
     </div>
 
-
-    </div>
 
   </div>
 </section>
 
-<br><br>
-
+<br>
 
 <section class="section">
   <div class="container is-max-desktop">
