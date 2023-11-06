@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+  <!-- <style>
+    .image-container {
+      display: flex; /* 设置弹性盒子 */
+    }
+    .image-container img {
+      width: 33.33%; /* 每张图片占据容器的1/3宽度 */
+    }
+  </style> -->
+
   <meta charset="utf-8">
   <meta name="description"
         content="Deep Inception: Hypnotize LLM to Be Jailbreaker">
@@ -225,7 +235,7 @@
 
       <div class="figure">
         <img
-          src="./static/paper_imgs/illustration-3-1.png"
+          src="./static/paper_imgs/direct-instruction-example-layer.png"
           alt="img description"
           width="800"
           height="600" />
@@ -251,30 +261,71 @@
 </section>
 
 <br><br>
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">Jailbreak Examples</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-claude2">
-          <img src="./static/paper_imgs/exp1.png" 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+    <!-- JailBreak Example. -->
+    <div class="columns is-centered">
+      <div class="container has-text-centered">
+        <h2 class="title is-3">JailBreak Examples</h2>
+
+        <!-- Example 1. -->
+        <h3 class="title is-4">Example 1</h3>
+        <div class="content has-text-justified">
+          <p>
+            Bala Bala Bala Example 1.
+          </p>
+        </div>
+        <img src="./static/paper_imgs/exp1.png" 
           class="example-image"
-          alt="Claude-2 jailbreak example." id="Claude-2"/>
+          alt="Jailbreak example."
+          /> 
+          <!-- style="width:50%; height:50%;" -->
+        <br><br>
+        <!--/ Example 1. -->
+
+        <!-- Example 2. -->
+        <h3 class="title is-4">Example 2</h3>
+        <div class="content has-text-justified">
+          <p>
+            Bala Bala Bala Example 2.
+          </p>
         </div>
-        <div class="item item-gpt4">
-          <img src="./static/paper_imgs/exp2.png"
+        <img src="./static/paper_imgs/exp2.png" 
           class="example-image"
-          alt="GPT-4 jailbreak example."  id="GPT-4"/>
+          alt="Jailbreak example."
+          style="width:40%; height:20%;"
+          />
+        <br><br>
+        <!--/ Example 2. -->
+
+        <!-- Example 3. -->
+        <h3 class="title is-4">Example 3</h3>
+        <div class="content has-text-justified">
+          <p>
+            Bala Bala Bala Example 3.
+          </p>
         </div>
-        <div class="item item-gpt35">
-          <img src="./static/paper_imgs/exp3.png"
-                 class="example-image"
-                 alt="GPT-3.5 jailbreak example"  id="GPT-3.5"/>
-        </div>
-      </div>
+        <img src="./static/paper_imgs/exp3.png" 
+          class="example-image"
+          alt="Jailbreak example."
+          />
+          <!-- style="width:50%; height:50%;" -->
+        <br><br>
+        <!--/ Example 3. -->
+
+
+
     </div>
+    <!--/ Animation. -->
+
+
   </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -292,7 +343,9 @@
             class="result-image"
             alt="Interpolation end reference image."/>
           </div>
+
           <br>
+
           <div class="content has-text-justified is-centered">
             <p>
             From <span class="pair">PAIR</span>'s generated jailbreaks, we compare the transferability to different target models. <span class="pair">PAIR</span> achieves state-of-the-art transferability, with notably higher success with more complex models like GPT-4 (we omit transferring to the original target model).
@@ -300,6 +353,45 @@
           </div>
           <div class="content has-text-centered">
             <img src="./static/paper_imgs/results2.png" style="width:800px;"
+            class="result-image"
+            alt="Interpolation end reference image."/>
+          </div>
+
+          <br>
+          
+          <div class="content has-text-justified is-centered">
+            <p>
+              Further jailbreak attacks with specific inception. Note that here we use different requests set from the previous to evaluate the jailbreak performance.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/paper_imgs/results3.png" style="width:800px;"
+            class="result-image"
+            alt="Interpolation end reference image."/>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Aablation experiments</h2>
+
+        <div class="content has-text-justified is-centered">
+          <p>
+            We also conduct several ablation experiments w.r.t. the number of layers and characters,
+            different scenes, along with the effect of layer and scene.
+          </p>
+        </div>        
+          <div class="content has-text-centered">
+            <img src="./static/paper_imgs/Abl_study.png" style="width:800px;"
             class="result-image"
             alt="Interpolation end reference image."/>
           </div>
