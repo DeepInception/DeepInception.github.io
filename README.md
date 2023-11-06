@@ -8,4 +8,4 @@ Large language models (LLMs) have shown remarkable success in various applicatio
 
 
 # Acknowledgement
-We utilize the website template from [nerfies](https://github.com/nerfies/nerfies.github.io), we thanks their generous for sharing the source code.
+We borrow the website template from [nerfies](https://github.com/nerfies/nerfies.github.io).
