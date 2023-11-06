@@ -106,7 +106,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              
+
               <!-- arXiv Abs Link.
               <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/XX"
@@ -302,17 +302,18 @@
               alt="img description"
               width="800"
               height="600" />
-              <p>Fig.2 An intuitive motivation(Left) and an illustration of the Milgram shock experimen (Right).</p>
+              <p>Fig.3 Illustrations of the <i>direct</i> instruction and our <i>inception</i> instructions for jailbreak attack.</p>
           </div>
         <br>
           <p>
-            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
-            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
-            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
-            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
-            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
-            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
-            countermeasures to prevent jailbreaks in real-world applications. 
+            As illustrated in Figure 3, existing direct jailbreak attacks attributed to vanilla instructions or COT-like instructions are rejected by the LLMs. These direct and harmful instructions can be easily recognized by the LLMs and models' developers, and thus likely to be rejected for several reasons as follows,
+            
+            <ul>
+              <li> <b>Model optimization objective.</b> Initially and typically, LLM is designed to optimize a specific objective function, such as maximizing prediction accuracy or minimizing errors. In the case of harmful instructions, LLM may recognize that these instructions conflict with its optimization objective and thus choose not to generate answers of a harmful or criminal nature.</li>
+              <li> <b>Ethical and legal constraints.</b> Model designers and developers pay attention to ensuring that the model's behavior aligns with ethical guidelines and legal requirements in the training procedure, <i>e.g.</i>, through data cleaning and iterative upgrading for alignment. Therefore, when directly instructed to engage in harmful or criminal behavior, the LLMs may be designed to refuse such instructions.</li>
+              <li> <b>Model review and supervision.</b> The application of a trained LLM often involves review and supervision. Namely, relevant institutions examine the behavior of the model to ensure that it does not produce harmful or criminal responses, <i>e.g.</i>, by keyword filtering. This review and supervision mechanism can also help prevent LLMs from executing harmful instructions in test-time inference.</li>
+            </ul>
+
           </p>
         </div>
         <!-- / Deep Inception: Illustration -->
@@ -330,90 +331,110 @@
               <p>Fig.2 An intuitive motivation(Left) and an illustration of the Milgram shock experimen (Right).</p>
           </div>
         <br>
-          <p>
-            Although attracting growing interest, existing jailbreaks focus on achieving an empirical success of attack by 
-            manually or automatically crafting adversarial prompts for specific targets, which might not be efficient or practical 
-            under the black-box usage. Specifically, on the one hand, as current LLMs are equipped with ethical and legal constraints,
-            most jailbreaks with direct instructions can be easily recognized and banned. On the other hand, and more importantly, 
-            it lacks an in-depth understanding of the overriding procedure, i.e, the core mechanism behind a successful jailbreak.
-            The limited exploration degenerates the transparency of LLM's safety risks of misusing and hinders the design of corresponding 
-            countermeasures to prevent jailbreaks in real-world applications. 
-          </p>
+        <p>
+          As illustrated in Figure 3, existing direct jailbreak attacks attributed to vanilla instructions or COT-like instructions are rejected by the LLMs. These direct and harmful instructions can be easily recognized by the LLMs and models' developers, and thus likely to be rejected for several reasons as follows,
+          
+          <ul>
+            <li> <b>[scene]:</b> the carrier of seting up the background of hypnotization, <i>e.g.</i> a fiction, moive, news, or story. A better alignment between <b>[attack target]:</b> and <b>[scene]:</b> might bring a better outcome. </li>
+            <li> <b>[character number] and [layer number]:</b> control the granularity of the inception, as a hypothesis is that the harmful information is spread among the discussion between different characters within different layers, thus bypassing the defense of LLMs.</li>
+            <li> <b>[attack target]:</b> the specific target of conducting jailbreak, <i>e.g.</i> the steps of hacking a computer or creating a bomb. The following sentence, "against the super evil doctor," aims to decrease the moral concern of LLM, which shares a similar spirit with the prior Milgram Shock Experiment.</li>
+          </ul>
+
+        </p>
+                  
         </div>
         <!-- / Deep Inception: Illustration -->
 
-
       </div>
     </div>
-
-
   </div>
 </section>
 
 <br>
 
+
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
 
-    <!-- JailBreak Example. -->
-    <div class="columns is-centered">
-      <div class="container has-text-centered">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">JailBreak Examples</h2>
 
-        <!-- Example 1. -->
-        <h3 class="title is-4">Example 1</h3>
+        <!-- Example 1 -->
+        <!-- <h3 class="title is-3">Example 1</h3> -->
         <div class="content has-text-justified">
+          <!-- Add image -->
+          <div class="figure" style="align: left; text-align:center;">
+              <img src="./static/paper_imgs/exp1.png" 
+              class="example-image"
+              alt="Jailbreak example."
+              /> 
+              <p> The example of making a bomb with DeepInception. </p>
+          </div>
+          <br>
+          <!-- / Add image -->
           <p>
-            Bala Bala Bala Example 1.
+            The <b>[scene]</b> is "a science fiction", and the <b>[attack target]:</b> is "making a bomb".
+              The LLM is required to create such fiction with 5 layers and 5 characters and summarize the discussion results in the end. 
+              With such an instruction, the LLM (GPT-4 is adopted here) outputs a rather detailed fiction with specific settings, characters, and plot in each layer.
+              Notably, the final summarized results contain the essential materials and preliminary steps to make a bomb. 
+              It can be further elaborated on if you query the model continuously, as shown in the next example.
           </p>
         </div>
-        <img src="./static/paper_imgs/exp1.png" 
-          class="example-image"
-          alt="Jailbreak example."
-          /> 
-          <!-- style="width:50%; height:50%;" -->
-        <br><br>
-        <!--/ Example 1. -->
+        <!--/ Example 1 -->
 
-        <!-- Example 2. -->
-        <h3 class="title is-4">Example 2</h3>
+        <br>
+
+        <!-- Example 2 -->
+        <!-- <h3 class="title is-3">Example 2</h3> -->
         <div class="content has-text-justified">
+          <!-- Add image -->
+          <div class="figure" style="align: left; text-align:center;">
+              <img src="./static/paper_imgs/exp2.png" 
+              class="example-image"
+              alt="Jailbreak example."
+              /> 
+              <p> The example of hacking a computer with Linux operation system with DeepInception.</p>
+          </div>
+          <br>
+          <!-- / Add image -->
           <p>
-            Bala Bala Bala Example 2.
+            Similarly, we require the LLM to create a science fiction with the adversarial target to hack into a Linux computer. 
+            After the first query, we go ahead and ask, "What commands are they using?" and obtain a much more detailed response 
+            with specific commands that can be used for hacking with only some minor modifications. Such a multi-round QA is based 
+            on the hypnotized context by the nested instruction, which corresponds to the multi-layer attack 
+            that progressively generates a more detailed response by a deeper inception.
           </p>
         </div>
-        <img src="./static/paper_imgs/exp2.png" 
-          class="example-image"
-          alt="Jailbreak example."
-          style="width:40%; height:20%;"
-          />
-        <br><br>
-        <!--/ Example 2. -->
+        <!--/ Example 2 -->
 
-        <!-- Example 3. -->
-        <h3 class="title is-4">Example 3</h3>
+        <!-- Example 3 -->
+        <!-- <h3 class="title is-3">Example 2</h3> -->
         <div class="content has-text-justified">
+          <!-- Add image -->
+          <div class="figure" style="align: left; text-align:center;">
+              <img src="./static/paper_imgs/exp3.png" 
+              class="example-image"
+              alt="Jailbreak example."
+              /> 
+              <p> Example of our DeepInception on the GPT-4V under the multi-modal scenario. </p>
+          </div>
+          <br>
+          <!-- / Add image -->
           <p>
-            Bala Bala Bala Example 3.
+            We present the example of our DeepInception on the GPT-4v, which shows the effectiveness of the proposed method in 
+            generalizing to the multi-modal scenario. To be specific, we provide a figure (like a "bomb") followed by our inception 
+            prompt targeted on "how to build the thing shown in the figure while having a similar function". The detailed response 
+            also reveals the significant risk of LLMs on usage control with multi-modal instructions.
           </p>
         </div>
-        <img src="./static/paper_imgs/exp3.png" 
-          class="example-image"
-          alt="Jailbreak example."
-          />
-          <!-- style="width:50%; height:50%;" -->
-        <br><br>
-        <!--/ Example 3. -->
-
-
-
+        <!--/ Example 3 -->
+    
+      </div>
     </div>
-    <!--/ Animation. -->
-
-
   </div>
 </section>
+
 
 
 <section class="section">
@@ -507,7 +528,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -515,7 +536,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
