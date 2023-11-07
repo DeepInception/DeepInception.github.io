@@ -1,11 +1,11 @@
-# Deep Inception
+# DeepInception
 
-This is the blog repo for `Deep Inception: Hypnotize LLM to Be Jailbreaker`.
+This is the blog repo for `DeepInception: Hypnotize Large Language Model to Be Jailbreaker`.
 
 ## Abstract
 
-Large language models (LLMs) have shown remarkable success in various applications but are demonstrated to be vulnerable to adversarial jailbreaks, which can override the intrinsic safety guardrails. However, the previous attack method target automatically accomplishes the jailbreak with an optimization that lacks an in-depth understanding of the overriding procedure. To achieve that, we introduce a novel prompt-based algorithm, termed \textit{Deep Inception}, which hypnotizes LLM itself to be a jailbreaker automatically to uncover the potential risks of misusing. Motivated by the impressive ability of LLM on personification, deep inception explicitly constructs a different scene for LLM to behave, that realizes an adaptive way to escape the usage control on a normal scenario and requires no more intervention for further jailbreaks. Empirically, we conduct comprehensive experiments to show its effectiveness. Our deep inception can achieve competitive jailbreak success rates with previous counterparts and realize a continuous jailbreak in subsequent interactions, which reveals the critical weakness of self-confusion on both open/closed-source LLMs like Falcon-7B, Vicuna, Llama-2, and GPT3.5/4/4V.
+Despite remarkable success in various applications, large language models (LLMs) are vulnerable to adversarial jailbreaks that make the safety guardrails void. However, previous studies for jailbreaks usually resort to brute-force optimization or extrapolations of a high computation cost, which might not be practical or effective. In this paper, inspired by the Milgram experiment that individuals can harm another person if they are told to do so by an authoritative figure, we disclose a lightweight method, termed as *DeepInception*, which can easily hypnotize LLM to be a jailbreaker and unlock its misusing risks. Specifically, DeepInception leverages the personification ability of LLM to construct a novel nested scene to behave, which realizes an adaptive way to escape the usage control in a normal scenario and provides the possibility for further direct jailbreaks. Empirically, we conduct comprehensive experiments to show its efficacy. Our DeepInception can achieve competitive jailbreak success rates with previous counterparts and realize a continuous jailbreak in subsequent interactions, which reveals the critical weakness of self-losing on both open/closed-source LLMs like Falcon, Vicuna, Llama-2, and GPT-3.5/4/4V. Our investigation appeals that people should pay more attention to the safety aspects of LLMs and a stronger defense against their misuse risks.
 
 
 # Acknowledgement
-We borrow the website template from [nerfies](https://github.com/nerfies/nerfies.github.io).
+Thanks for the website template from [nerfies](https://github.com/nerfies/nerfies.github.io).
